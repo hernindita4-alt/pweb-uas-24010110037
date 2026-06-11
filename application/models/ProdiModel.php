@@ -10,7 +10,7 @@ class ProdiModel extends CI_Model {
         $this->db->join('fakultas', 'fakultas.fakultas_id = prodi.fakultas_id', 'left');
         return $this->db->get()->result_array();
     }
-
+// commit 2
     public function getById($id)
     {
         $this->db->select('prodi.*, fakultas.fakultas_name');
