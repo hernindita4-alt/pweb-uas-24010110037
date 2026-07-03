@@ -59,7 +59,7 @@ class Datareservasi extends CI_Controller{
         // Update status reservasi menjadi lunas
         $this->db->where('id_reservasi', $id);
         $this->db->update('reservasi', [
-            'status' => 'lunas'
+            'status' => 'lunas' //update
         ]);
 
         // Update jumlah bayar menjadi lunas di tabel pembayaran
@@ -82,7 +82,7 @@ class Datareservasi extends CI_Controller{
         $this->db->delete('pembayaran');
 
         // Hapus data reservasi
-        $this->db->where('id_reservasi', $id);
+        $this->db->where('id_reservasi', $id);//update2
         $this->db->delete('reservasi');
 
         redirect('datareservasi');
